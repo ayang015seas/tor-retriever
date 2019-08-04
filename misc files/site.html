@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>About Me</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="About Me">
+	<!--
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">	 -->
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+
+	
+<script>
+document.getElementById("fh5co-logo").innerHTML = "Testing!";
+
+var https = require('https');
+var querystring = require('querystring');
+ 
+// form data
+var postData = querystring.stringify({
+  status: "Passive",
+  url: "https://www.facebook.com/"
+});
+ 
+// request option
+var options = {
+  host: 'localhost',
+  port: 443,
+  method: 'POST',
+  path: '/',
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Content-Length': postData.length
+  },
+  rejectUnauthorized: false
+};
+ 
+// request object
+var req = https.request(options, function (res) {
+  var result = '';
+  res.on('data', function (chunk) {
+    result += chunk;
+  });
+  res.on('end', function () {
+    console.log(result);
+  });
+  res.on('error', function (err) {
+    console.log(err);
+  })
+});
+ 
+// req error
+req.on('error', function (err) {
+  console.log(err);
+});
+
+//send request witht the postData form
+req.write(postData);
+req.end();
+
+</script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+
+	<div class="fh5co-loader"></div>
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo"><a href="index.html">Alex&nbspYang</a></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="portfolio.html">Projects</a></li>
+							<li class="has-dropdown">
+								<a href="blog.html">Articles</a>
+							</li>
+							<li class="active"><a href="about.html">About</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</nav>
+
+	<div id="fh5co-about">
+		<div class="container">
+			<img src="final.jpg"
+			class="img-fluid" alt="Responsive image" style ="max-width: 100%">
+			<br>
+			<br>
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>About Me</h2>
+					<p>My name is Alex Yang, and I'm from Woodbury, Minnesota. Currently, I study Computer Science at the University of Pennsylvania and conduct research for the Distributed Systems Laboratory. I enjoy kayaking, archery, and playing video games in my free time.
+					</p>
+					<p>I can be reached at ayang015@seas.upenn.edu or at (651)-280-7946.
+					</p>
+					<ul class="fh5co-social-icons">
+						<li><a href="https://github.com/ayang015seas"><i class="icon-github"></i></a></li>
+						<li><a href="https://www.facebook.com/profile.php?id=100023905130707"><i class="icon-facebook"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/alexander-yang-4ab38b156/"><i class="icon-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+	</div>
+
+
+	</body>
+</html>

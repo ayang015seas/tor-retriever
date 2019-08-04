@@ -1,0 +1,532 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+</head>
+
+<style>
+    /* Leaderboard */
+
+body {
+    background: #222;
+    font-family: sans-serif;
+}
+
+
+
+#base {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+    width: 728px;
+    height: 90px;
+    overflow: hidden;
+    background: #FFF;
+    border-radius: 0px;
+    box-shadow: 10px 10px 10px;
+}
+
+.long {
+    height: 470%;
+    transform: rotate(-3deg);
+    position: absolute;
+    top: -210px;
+    left: -10px;
+    animation: long 0.4s ease-in-out infinite;
+    animation-direction: alternate-reverse;
+}
+
+.title {
+    position: absolute;
+    height: 70%;
+    left: 10px;
+    top: 15px;
+    filter: drop-shadow(0px 0px 10px #000);
+    z-index: 1;
+    animation: t 10s ease-in-out infinite;
+}
+
+.spin2 {
+    position: absolute;
+    animation: spin2 10s linear infinite;
+}
+
+.spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 25px;
+    left: -60px;
+    width: 40px;
+    height: 40px;
+    filter: blur(50%);
+    border-radius: 100%;
+    border: 10px solid blue;
+    border-top-color: blue;
+    border-bottom-color: red;
+    animation: spinner 0.4s linear infinite;
+    animation-direction: alternate-reverse;
+    filter: blur(30px) brightness(15);
+}
+
+.slid1 {
+    position: absolute;
+    background-color: white;
+    height: 300px;
+    width: 800px;
+    top: -100px;
+    left: -10px;
+    transform: rotate(10deg);
+    z-index: 2;
+    animation: s1 10s ease infinite;
+}
+
+.but {
+    color: white;
+    position: absolute;
+    top: 40px;
+    left: 350px;
+    height: 35px;
+    width: 180px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    background: linear-gradient(45deg, #a6075b, #fe0034, #fe0034);
+    box-shadow: 0px 0px 20px 0.5px #000;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    animation: b 2s linear infinite;
+    z-index: 1;
+}
+
+.butd {
+    position: absolute;
+    animation: butd 10s ease-in-out infinite;
+}
+
+a:link,
+a:visited {
+    color: azure;
+    text-decoration: none;
+}
+
+.ea {
+    position: absolute;
+    height: 70%;
+    top: 13px;
+    left: 320px;
+    z-index: 3;
+    animation: ea 10s ease infinite;
+
+}
+
+.ps {
+    position: absolute;
+    height: 100%;
+    left: 1700px;
+    z-index: 3;
+    animation: ps 10s ease-in-out infinite;
+}
+
+.x {
+    position: absolute;
+    height: 70%;
+    top: 11.5px;
+    left: 1700px;
+    z-index: 3;
+    animation: x 10s ease-in-out infinite;
+
+}
+
+.h2 {
+    position: absolute;
+    height: 300px;
+    width: 180px;
+    top: -100px;
+    left: 800px;
+    background: linear-gradient(45deg, #a6075b, #fe0034, #fe0034);
+    transform: rotate(10deg);
+    z-index: 6;
+    animation: h2 10s ease-in-out infinite;
+
+}
+
+.h1 {
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    left: 10px;
+    padding-top: 20px;
+    height: 90px;
+    width: 160px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    animation: h 10s ease-in-out infinite;
+    transform: rotate(-10deg);
+    z-index: 6;
+}
+
+@keyframes h2 {
+    30% {
+        left: 1500px;
+    }
+
+    70% {
+        left: 558px;
+    }
+
+    90% {
+        left: 558px;
+    }
+
+    99% {
+        left: 1500px;
+    }
+}
+
+@keyframes ps {
+
+    30% {
+        left: 1500px;
+    }
+
+    60% {
+        left: 385px;
+    }
+
+    90% {
+        left: 385px;
+    }
+
+    99% {
+        left: 1500px;
+    }
+}
+
+@keyframes x {
+
+    30% {
+        left: 1700px;
+    }
+
+    65% {
+        left: 475px;
+    }
+
+    89% {
+        left: 475px;
+    }
+
+    99% {
+        left: 1700px;
+    }
+}
+
+@keyframes t {
+    0% {
+        left: 800px;
+    }
+
+    20% {
+        left: 5px;
+    }
+
+    21% {
+        left: 10px;
+    }
+
+}
+
+@keyframes butd {
+    0% {
+        top: 500px;
+    }
+
+    20% {
+        top: 0px;
+    }
+
+}
+
+
+@keyframes b {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(0deg);
+    }
+
+    30% {
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform: rotate(1deg);
+    }
+
+    50% {
+        transform: rotate(-1deg);
+    }
+
+    60% {
+        transform: rotate(1deg);
+    }
+
+    70% {
+        transform: rotate(0deg);
+    }
+
+    80% {
+        transform: rotate(0deg);
+    }
+
+    90% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes ea {
+    0% {
+        left: 320px;
+    }
+
+    30% {
+        left: 1500px;
+    }
+
+    60% {
+        left: 320px;
+    }
+}
+
+@keyframes s1 {
+    0% {
+        left: -5px;
+    }
+
+    30% {
+        left: 1500px;
+    }
+
+    55% {
+        left: 300px;
+    }
+
+    90% {
+        left: 300px;
+    }
+
+}
+
+@keyframes long {
+    0% {
+        left: -12px;
+        top: -212px;
+    }
+
+    50% {
+        left: -13px;
+        top: -210px;
+    }
+}
+
+@keyframes spin2 {
+    0% {
+        left: -60px;
+    }
+
+    25% {
+        left: -60px;
+    }
+
+    30% {
+        left: 120px;
+    }
+
+    80% {
+        left: 120px;
+    }
+
+    99% {
+        left: 120px;
+    }
+}
+
+@keyframes spinner {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        transform: rotate(360deg)
+    }
+
+}
+
+</style>
+
+
+<body>
+
+<script>
+function pick() {
+    return new Promise(function(resolve, reject) {
+        const urlList = [ 'http://www.youtube.com',
+  'http://www.facebook.com',
+  'http://www.baidu.com',
+  'http://www.yahoo.com',
+  'http://www.amazon.com',
+  'http://www.wikipedia.org',
+  'http://www.qq.com',
+  'http://www.google.co.in',
+  'http://www.twitter.com',
+  'http://www.live.com',
+  'http://www.taobao.com',
+  'http://www.bing.com',
+  'http://www.instagram.com',
+  'http://www.weibo.com',
+  'http://www.sina.com.cn',
+  'http://www.linkedin.com',
+  'http://www.yahoo.co.jp',
+  'http://www.msn.com',
+  'http://www.vk.com',
+  'http://www.google.de',
+  'http://www.yandex.ru',
+  'http://www.hao123.com',
+  'http://www.google.co.uk',
+  'http://www.reddit.com',
+  'http://www.ebay.com',
+  'http://www.google.fr',
+  'http://www.t.co',
+  'http://www.tmall.com',
+  'http://www.google.com.br',
+  'http://www.360.cn',
+  'http://www.sohu.com',
+  'http://www.amazon.co.jp',
+  'http://www.pinterest.com',
+  'http://www.netflix.com',
+  'http://www.google.it',
+  'http://www.google.ru',
+  'http://www.microsoft.com',
+  'http://www.google.es',
+  'http://www.wordpress.com',
+  'http://www.gmw.cn',
+  'http://www.tumblr.com',
+  'http://www.paypal.com',
+  'http://www.blogspot.com',
+  'http://www.imgur.com',
+  'http://www.stackoverflow.com',
+  'http://www.aliexpress.com',
+  'http://www.naver.com',
+  'http://www.ok.ru',
+  'http://www.apple.com',
+  'http://www.github.com',
+  'http://www.chinadaily.com.cn',
+  'http://www.imdb.com',
+  'http://www.google.co.kr',
+  'http://www.fc2.com',
+  'http://www.jd.com',
+  'http://www.blogger.com',
+  'http://www.163.com',
+  'http://www.google.ca',
+  'http://www.whatsapp.com',
+  'http://www.amazon.in',
+  'http://www.office.com',
+  'http://www.tianya.cn',
+  'http://www.google.co.id',
+  'http://www.youku.com',
+  'http://www.rakuten.co.jp',
+  'http://www.craigslist.org',
+  'http://www.amazon.de',
+  'http://www.nicovideo.jp',
+  'http://www.google.pl',
+  'http://www.soso.com',
+  'http://www.bilibili.com',
+  'http://www.dropbox.com',
+  'http://www.xinhuanet.com',
+  'http://www.outbrain.com',
+  'http://www.pixnet.net',
+  'http://www.alibaba.com',
+  'http://www.alipay.com',
+  'http://www.microsoftonline.com',
+  'http://www.booking.com',
+  'http://www.googleusercontent.com',
+  'http://www.google.com.au',
+  'http://www.popads.net',
+  'http://www.cntv.cn',
+  'http://www.zhihu.com',
+  'http://www.amazon.co.uk',
+  'http://www.diply.com',
+  'http://www.coccoc.com',
+  'http://www.cnn.com',
+  'http://www.bbc.co.uk',
+  'http://www.twitch.tv',
+  'http://www.wikia.com',
+  'http://www.google.co.th',
+  'http://www.google.com.ph',
+  'http://www.doubleclick.net',
+  'http://www.googleadservices.com',
+  'http://www.accuweather.com',
+  'http://www.googleweblight.com',
+  'http://www.answers.yahoo.com' ];
+    var choice = urlList[Math.floor(Math.random() * 100)];
+    resolve(choice);
+    })
+  }
+
+function test() {
+    pick().then(val => {
+        fetch('http://localhost:3000/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+
+    },
+    body: JSON.stringify({status: "Passive", url: val})
+  })
+    .then(res => console.log("Process Finished"))
+    })
+}
+</script>
+
+    <div id="base"><a href="https://www.ea.com/fr-fr/games/need-for-speed/need-for-speed-payback" target="_blank">
+
+            <div>
+                <img src="http://gamemag.ru/images/uploads/4080/760632a82e03e5a26a614ec6f56a09fc.jpg" class="long" alt="run">
+                <img src="https://medias.micromania.fr/catalog/product/cache/1/micromania_main_logo/9df78eab33525d08d6e5fb8d27136e95/l/o/logo-title_13.png" class="title" alt="nfs-payback">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Electronic-Arts-Logo.svg/1024px-Electronic-Arts-Logo.svg.png" class="ea" alt="ea">
+                <img src="https://psmedia.playstation.com/is/image/psmedia/psn-icon-new-to-ps4-product-grid-02-eu-14jun18?$Icon$" class="ps" alt="ps4">
+                <img src="http://www.iconarchive.com/download/i98465/dakirby309/simply-styled/Xbox.ico" class="x" alt="xbox-one">
+                <div class="spin2">
+                    <div class="spinner"></div>
+                </div>
+                <div class="slid1"></div>
+                <div class="butd">
+                    <button class="but" onclick="test()">Support Internet Freedom!</button>
+                </div>
+                <div class="h2">
+                    <h class="h1">Available <br> now</h>
+                </div>
+            </div>
+        </a>
+    </div>
+</body>
+
+</html>
